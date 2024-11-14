@@ -1,0 +1,566 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Rubik', sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+:root{
+	--bg-color: white;
+	--text-color: #000000;
+	--main-color: #00bf63;
+
+	--big-font: 7rem;
+	--p-font: 1.1rem;
+}
+
+body{
+	background: var(--bg-color);
+	color: var(--text-color);
+	overflow-x: hidden ;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 32px 15%;
+	background: white;
+	transition: all ease .45s;
+}
+
+.logo{
+	color: var(--text-color);
+	font-size: 41px;
+	font-weight: 600;
+}
+
+.logo span{
+	color: var(--main-color);
+}
+
+.navbar{
+	display: flex;
+}
+
+.navbar a{
+	font-size: var(--p-font);
+	font-weight: 500;
+	color: var(--text-color);
+	margin: 0 25px;
+	transition: all ease .50s;
+}
+
+.navbar a:hover{
+	color: var(--main-color);
+}
+
+.navbar a.active{
+	color: var(--main-color);
+}
+
+section{
+            padding: 0 15%;
+            transition: background-color 2s ease-in-out;
+        }
+
+        .home{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .home-img{
+          /* Remove border-radius for square */
+          width: 500px; 
+          height: 500px;
+          object-fit: cover;
+          transition: transform 0.3s ease; /* Add a smooth transition for transform */
+           
+        }
+
+        .home-img:hover {
+          transform: scale(1.1); /* Zoom in on hover */
+        }
+
+        .home-img img{
+          /* Remove border-radius for square */
+          width: 100%; 
+          height: 100%;
+          object-fit: cover; 
+           border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+.home-text span{
+            padding: 10px 25px;
+            background: var(--main-color);
+            border: 1px solid #00e673;
+            padding: 20px 20px;
+            border-radius: 100px;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 10px;
+            text-transform: uppercase;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .home-text span{
+            padding: 10px 25px;
+            background: var(--main-color);
+            border: 1px solid #00e673;
+            padding: 20px 20px;
+            border-radius: 100px;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 10px;
+            text-transform: uppercase;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .home-text span:hover{
+            background-color:#b3ffd9;
+        }
+
+        .home-text h1{
+            font-size: var(--big-font);
+            margin: 20px 0;
+            color: var(--main-color);
+        }
+
+        .home-text p{
+            font-size: var(--p-font);
+            font-weight: 400;
+            color: #000000;
+            line-height: 30px;
+            mask-border: 50px;
+            text-align: justify;
+        }
+
+  section {
+            padding: 0 15%;
+        }
+
+        .about {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            gap: 30px;
+            flex-direction: row-reverse; /* Reverse the order of flex items */
+        }
+
+        .about-img {
+          width: 500px; 
+          height: 500px;
+          object-fit: cover;
+          overflow: hidden; /* Hide anything outside the square */
+        }
+
+        .about-img img {
+          width: 100%; /* Make the image responsive */
+          height: auto; /* Maintain aspect ratio */
+        }
+
+        .about-text span {
+            padding: 5px 25px;
+            background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+            box-shadow: 0px 20px 40px #00000070;
+            border: 1px solid #3b3b3b;
+            padding: 10px 20px;
+            border-radius: 100px;
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 10px;
+            text-transform: uppercase;
+        }
+
+        .about-text p{
+            font-size: var(--p-font);
+            font-weight: 400;
+            color: #000000;
+            line-height: 30px;
+            mask-border: 50px;
+            text-align: justify;
+        }
+
+        .about-text h2 {
+            font-size: var(--big-font);
+            margin: 20px 0;
+            color: var(--main-color);
+        }
+
+section{
+	padding: 0 15%;
+}
+
+/* Projects Section Styles */
+.projects {
+          padding: 50px 0; /* Add top and bottom padding */
+          background: var(--bg-color); /* Set a background color */
+        }
+
+        .projects-text {
+          text-align: center; /* Center the text */
+          margin-bottom: 40px; /* Add margin below the text */
+        }
+
+        .projects-text span {
+          display: inline-block; /* Make the span an inline-block element */
+          padding: 5px 15px; /* Add padding around the text */
+          background-color: white; /* Set a background color */
+          color: #fff; /* Set text color */
+          border-radius: 25px; /* Round the corners */
+          margin-bottom: 10px; /* Add margin below the span */
+        }
+
+        .projects-text h3 {
+          font-size: 2.5rem; /* Set the heading size */
+          font-weight: 600; /* Make the heading bold */
+          margin-bottom: 15px; /* Add margin below the heading */
+          color: var(--main-color);
+        }
+
+        .projects-text p {
+          font-size: 1.1rem; /* Set the paragraph size */
+          line-height: 1.6; /* Adjust line height for readability */
+          max-width: 700px; /* Limit the width of the paragraph */
+          margin: 0 auto; /* Center the paragraph */
+        }
+
+        .projects-container {
+          display: flex; /* Enable flexbox layout */
+          flex-wrap: wrap; /* Allow elements to wrap to the next line */
+          justify-content: center; /* Center the items horizontally */
+          gap: 30px; /* Add spacing between items */
+        }
+
+        .project-item {
+          background-color: #fff; /* Set a background color for the project item */
+          border-radius: 10px; /* Round the corners */
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+          padding: 20px; /* Add padding inside the item */
+          text-align: center; /* Center the text within the item */
+          width: 300px; /* Set the width of the project item */
+          transition: transform 0.3s ease; /* Add a smooth transition for transform */
+        }
+
+        .project-item img {
+          width: 100%; /* Make the image responsive */
+          height: 60%; /* Maintain aspect ratio */
+          border-radius: 20px; /* Round the corners of the image */
+          margin-bottom: 10px; /* Add margin below the image */
+        }
+
+        .project-item:hover {
+          transform: scale(1.1); /* Zoom in on hover */
+        }
+
+        .project-item h4 {
+          font-size: 1.5rem; /* Set the heading size */
+          font-weight: 600; /* Make the heading bold */
+          margin-bottom: 10px; /* Add margin below the heading */
+          color: var(--main-color);
+        }
+
+        .project-item p {
+          font-size: 1rem; /* Set the paragraph size */
+          line-height: 1.5; /* Adjust line height for readability */
+          margin-bottom: 15px; /* Add margin below the paragraph */
+        }
+
+        .project-link {
+          display: inline-block; /* Make the link an inline-block element */
+          padding: 10px 20px; /* Add padding around the link */
+          background-color: #1f1f21; /* Set a background color */
+          color: #fff; /* Set text color */
+          border-radius: 25px; /* Round the corners */
+          text-decoration: none; /* Remove the default link underline */
+          transition: background-color 0.3s ease; /* Add a smooth transition */
+        }
+
+        .project-link:hover {
+          background-color: #555; /* Change the background color on hover */
+        }
+
+section {
+    padding: 0 15%;
+}
+
+.blog {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This is already for space-between */
+    gap: 30px;
+}
+
+.blog-img {
+  border-radius: 50%;
+  width: 500px; 
+  height: 500px;
+  object-fit: cover;
+}
+
+.blog-img img {
+  border-radius: 50%; 
+  width: 400px; 
+  height: 400px;
+  object-fit: cover;
+  /* align-items: left;  -- Remove this, it's for flex containers */
+}
+
+.blog-text p{
+	font-size: var(--p-font);
+	font-weight: 400;
+	color: #c3c3c3;
+	line-height: 30px;
+	mask-border: 50px;
+	text-align: justify;
+}
+
+.blog-text h5 {
+    font-size: var(--big-font);
+    margin: 20px 0;
+}
+
+/* Contact Us Section Styles */
+.contact {
+    padding: 100px 0; 
+    background-color: #f2f2f2;
+    background: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    width: 45%; 
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.contact-info p {
+    font-size: var(--p-font);
+            font-weight: 400;
+            color: #000000;
+            line-height: 30px;
+            mask-border: 50px;
+            text-align: justify;
+            margin: 20px;
+}
+
+.contact-form {
+    width: 45%; /* Adjust width as needed */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 15px 25px;
+    background-color: #00e673; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ .contact-form button:hover{
+            background-color:#b3ffd9;
+          }
+
+
+footer {
+    background-color: #333; 
+    color: #fff;
+    padding: 30px 0; 
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.footer-text p{
+	text-align: center;
+	display: flex;
+}
+
+
+@media (max-width: 1370px){
+	header{
+		padding: 15px 4%;
+		transition: .2s;
+	}
+	section{
+		padding: 0 4%;
+		transition: .2s;
+	}
+	.share{
+		left: 4%;
+		transition: .2s;
+	}
+	:root{
+		--big-font: 5.5rem;
+	    --p-font: 1rem;
+	    transition: .2s;
+	}
+}
+
+@media (max-width: 1020px){
+	.navbar a{
+		margin: 0 15px;
+	}
+	:root{
+		--big-font: 5rem;
+	    --p-font: 1rem;
+	    transition: .2s;
+	}
+}
+
+@media (max-width: 950px){
+	.share{
+		display: none;
+	}
+	section{
+		padding: 70px 4%;
+	}
+	header{
+		padding: 11px 4%;
+		background: #2d2d2d;
+	}
+	.home{
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.home-text{
+		order: 2;
+	}
+	.home-img{
+		margin: auto;
+		height: auto;
+		width: auto;
+	}
+	.home-img img{
+		max-width: 450px;
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 850px){
+	.navbar{
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		padding: 40px 50px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 100%;
+		display: flex;
+		flex-direction: column;
+		background: #2d2d2d;
+		transition: all 0.4s ease-in-out;
+	}
+	.navbar a{
+		display: block;
+		color: #c3c3c3;
+		padding: 0px;
+		margin: 0px 0px 40px 0px;
+		font-size: 2rem;
+		font-weight: 400;
+	}
+	.navbar.open{
+		left: 0;
+	}
+}
+
+
+@keyframes imgg{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-22px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+
+
+
+.image-container {
+      display: flex;
+      flex-wrap: wrap; /* Wrap images if needed */
+      justify-content: space-around;
+    }
+
+    .image-item {
+      margin: 10px; /* Add some spacing between images */
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 200px;
+      height: auto;
+    }
+
+    .caption {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+
+
+@keyframes imgg{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-22px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
